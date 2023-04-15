@@ -11,7 +11,6 @@ import { about } from '$lib/data/projects';
 <style>
 
     div{
-        margin-top: 5rem;
         padding: 5rem;
         width: 756px;
     }

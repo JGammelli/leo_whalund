@@ -44,7 +44,6 @@ import { contact } from '$lib/data/projects';
         color: #ECC977;
     }
     .container{
-        margin-top: 5rem;
         padding: 5rem;
         width: 756px;
         
