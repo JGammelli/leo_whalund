@@ -100,7 +100,7 @@
       {/if}
     </div>
     <div class="projectItem">
-       <img src={`../src/img/${data.image}`} alt="Methusela">
+       <img src={`http://drive.google.com/uc?export=view&id=${data.image}`} alt="Methusela">
     </div>
   </div>
   
