@@ -14,10 +14,10 @@
                     <svg width="1402" height="80" viewBox="0 0 1402 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M419.432 53L449.058 79L478.685 53" stroke="#8E8E8E"/>
                         <path class="pointer" d="M434.535 53L449.639 66L464.743 53" stroke="#ff9d42"/>
-                        <path d="M828.22 53H731.788" stroke="8E8E8E"/>
-                        <path d="M672.535 53H576.104" stroke="8E8E8E"/>
-                        <path d="M828.22 53L1080.34 53" stroke="#8E8E8E"/>
-                        <path d="M323.988 53L576.104 53" stroke="#8E8E8E"/>
+                        <path d="M575.116 53H478.685" stroke="white"/>
+                        <path d="M419.432 53H323" stroke="white"/>
+                        <path d="M827 53L1079.12 53" stroke="#8E8E8E"/>
+                        <path d="M575 53L827.116 53" stroke="#8E8E8E"/>
                         <path d="M1387.06 1L1359.17 27" stroke="#8E8E8E"/>
                         <path d="M1401 14L1373.12 40" stroke="#8E8E8E"/>
                         <path d="M1359.17 27L1107.06 27" stroke="#8E8E8E"/>
@@ -33,10 +33,10 @@
                             <svg width="1402" height="80" viewBox="0 0 1402 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M923.432 53L953.058 79L982.685 53" stroke="#8E8E8E"/>
                                 <path class="pointer" d="M938.535 53L953.639 66L968.743 53" stroke="#ff9d42"/>
-                                <path d="M828.22 53H731.788" stroke="8E8E8E"/>
-                                <path d="M672.535 53H576.104" stroke="8E8E8E"/>
-                                <path d="M828.22 53L1080.34 53" stroke="#8E8E8E"/>
-                                <path d="M323.988 53L576.104 53" stroke="#8E8E8E"/>
+                                <path d="M1079.12 53H982.685" stroke="white"/>
+                                <path d="M923.432 53H827" stroke="white"/>
+                                <path d="M324 53L576.116 53" stroke="#8E8E8E"/>
+                                <path d="M576 53L828.116 53" stroke="#8E8E8E"/>
                                 <path d="M1387.06 1L1359.17 27" stroke="#8E8E8E"/>
                                 <path d="M1401 14L1373.12 40" stroke="#8E8E8E"/>
                                 <path d="M1359.17 27L1107.06 27" stroke="#8E8E8E"/>
@@ -51,8 +51,8 @@
                         <svg width="1402" height="80" viewBox="0 0 1402 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M672.535 53L702.162 79L731.788 53" stroke="#8E8E8E"/>
                             <path class="pointer" d="M687.639 53L702.743 66L717.846 53" stroke="#ff9d42"/>
-                            <path d="M828.22 53H731.788" stroke="8E8E8E"/>
-                            <path d="M672.535 53H576.104" stroke="8E8E8E"/>
+                            <path d="M828.22 53H731.788" stroke="white"/>
+                            <path d="M672.535 53H576.104" stroke="white"/>
                             <path d="M828.22 53L1080.34 53" stroke="#8E8E8E"/>
                             <path d="M322.988 53L576.104 53" stroke="#8E8E8E"/>
                             <path d="M1387.06 1L1359.17 27" stroke="#8E8E8E"/>
