@@ -8,7 +8,7 @@ import { projects } from '$lib/data/projects';
 		{#each projects as project}
             <div class="projectContainer">
 				<div class="project">
-					<div class="img" style= {`background: url('src/img/${project.image}') no-repeat; background-size: cover;`}>
+					<div class="img" style= {`background: url('http://drive.google.com/uc?export=view&id=${project.image}') no-repeat; background-size: cover;`}>
 						<div class="svg">				
 							<div class="text">
 								<h2>
@@ -62,7 +62,7 @@ import { projects } from '$lib/data/projects';
 		height: 100%;
 	}
 	.svg{
-		background: url('src/svg/Box.svg') no-repeat;
+		background: url('http://drive.google.com/uc?export=view&id=1ZzgBiXHL1s0EP4pnHgEJ4TeWjkR6HFz3') no-repeat;
 		background-size: cover;
 		position: relative;
 		max-width: 794px;

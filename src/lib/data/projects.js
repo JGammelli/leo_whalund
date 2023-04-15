@@ -1,12 +1,12 @@
 export const about = {
-  title: "About",
+  title: "Hi, I'm Leo!",
   content:
     "I have had a passion for games ever since my parents bought a Gameboy Advance and Pokemon LeafGreen cartridge. I love crafting mechanics, testing and improving them until they play and feel the way they should. I am a social, happy and driven person who works best in teams where communication is free flowing and clear. I am looking for a place where I can grow as a designer and work together with a close knit team.",
-  image: "leo.jpg",
+  image: "1gmEPZpe8tS0CIZJL27YgJwdrjNYwLruq",
 };
 
 export const contact = {
-  title: "Contact me!",
+  title: "Reach out to me!",
   git: "https://github.com/LostmyCigar",
   email: "leo.wahlund@gmail.com",
   phone: "+46 760 397 664",
@@ -17,7 +17,7 @@ export const projects = [
   {
     title: `Methusela`,
     content: `Content for  goes here`,
-    image: `MethuselahSlam.gif`,
+    image: `1Kn2v6yi7PUFK3W92TGJZmYLwmcpK-uCW`,
     isDesign: true,
     isProgram: false,
     designText:
@@ -27,7 +27,7 @@ export const projects = [
   {
     title: `Aastra`,
     content: `Content for  goes here`,
-    image: `astra.gif`,
+    image: `1tV1FofE_wLxIuSPqYcaol6zRz1ZvaItl`,
     isDesign: true,
     isProgram: true,
     designText:
@@ -38,7 +38,7 @@ export const projects = [
   {
     title: `Bouncing Ball`,
     content: `Content for  goes here`,
-    image: `bouncingball.gif`,
+    image: `1TcxxFg_hPrJemkzDMOx8au20TR1pclrC`,
     isDesign: true,
     isProgram: true,
     designText:
@@ -49,7 +49,7 @@ export const projects = [
   {
     title: `Behemoth Battles`,
     content: `Content for  goes here`,
-    image: `BehemothBattle.png`,
+    image: `1nZvwU0EfLlZ4w8j3l1tRK_aUHzB1lr1w`,
     isDesign: true,
     isProgram: true,
     designText:
@@ -59,7 +59,7 @@ export const projects = [
   {
     title: `Neon Shooter`,
     content: `Content for  goes here`,
-    image: `neon.jpg`,
+    image: `1eGTQRZgdQG_rfeFuqgaGI6GjwqPC6AyG`,
     isDesign: true,
     isProgram: true,
     designText:
@@ -69,7 +69,7 @@ export const projects = [
   {
     title: `Slice Dude`,
     content: `Content for  goes here`,
-    image: `SliceDude.gif`,
+    image: `1YEr5ve4C6G0ba99PEzxKcLZ9Wgctn89y`,
     isDesign: true,
     isProgram: true,
     designText:
@@ -80,7 +80,7 @@ export const projects = [
   {
     title: `Unnamed platformer`,
     content: `Content for  goes here`,
-    image: `unnamedgame.gif`,
+    image: `1q-ZgL9elLF0CKobo-QHjEM6GcvFauSrM`,
     isDesign: true,
     isProgram: true,
     designText: "Some design text here",

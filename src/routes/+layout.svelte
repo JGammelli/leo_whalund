@@ -5,6 +5,7 @@
 <div class="container">
     <div class="header">
         <h1>Leo Wahlund</h1>
+        <p class="smalTxt">Programmer and Designer</p>
     </div>
     <div class="navigator">
         <nav>
@@ -116,6 +117,12 @@
         flex-direction: row;
         justify-content: space-around;
     }
+    .smalTxt{
+        font-size: .9rem;
+        margin-top: 1rem;
+        letter-spacing: .4rem;
+        color: #ECC977;
+    }
     :global(a){
 		text-decoration: none;
 		color: #ECE8E1;
@@ -123,7 +130,7 @@
 	:global(body){
 		background-color: #121824;
 		color: #ECE8E1;
-        background: url('src/img/background2.jpg') no-repeat;
+        background: url('http://drive.google.com/uc?export=view&id=1y6DAZU8_9YjqxjN-2r_0dbOm2BZCG4CF') no-repeat;
 
 	}
 	:global(*){
