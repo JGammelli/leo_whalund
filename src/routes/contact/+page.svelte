@@ -51,4 +51,25 @@ import { contact } from '$lib/data/projects';
     h2{
         margin-bottom: 3rem;
     }
+    @media (max-width: 1024px) {
+        .content{
+            padding: 2rem 7rem;
+
+        }
+        .content p, a{
+            margin: 0;
+        }
+
+        a:hover{
+            color: #ECC977;
+        }
+        .container{
+            padding: 0rem;
+            width: 100vw;
+        }
+        h2{
+            margin-top: 4rem;
+        }
+
+    }
 </style>

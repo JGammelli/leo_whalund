@@ -95,10 +95,34 @@ import { projects } from '$lib/data/projects';
 	}
 
 	
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-			
+	@media (max-width: 1024px) {
+	
+		.text{
+			position: absolute;
+			bottom: 1vw;
+			left: 1vw;
+			text-align: start;
+		}
+		.text p{
+			display: none;
+		}
+		.text h2 a{
+			font-size: 1rem;
+		}
+		.pointer{
+			bottom: 0;
+			right:  0;
+			scale: .5;
+		}
+			.svgPointer rect, path{
+			fill: #021826;
+			stroke: #B58A4E;
+		}
+		@media (max-width: 780px) {
+
+			.text h2 a{
+				font-size: .7rem;
+			}
 		}
 	}
 </style>

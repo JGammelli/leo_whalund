@@ -146,5 +146,24 @@
     :global(p, a){
 		font-size: 1.2rem;
 	}
+    @media (max-width: 1024px) {
+
+		.container{
+			width: 100vw;
+		}
+        ul{
+            width: 100vw;
+            height: 5rem;
+        }
+        svg{
+            width: 100vw !important;
+        }
+	}
+    @media (max-width: 780px) {
+
+        :global(a, p){
+            font-size: .7rem;
+        }
+    }
 </style>
 

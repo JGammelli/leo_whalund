@@ -174,4 +174,42 @@
   .link{
     color: #ECC977;
   }
+  @media (max-width: 1024px) {
+    .projectContainer{
+      flex-direction: column;
+      width: 100%;
+    }
+    .container{
+      width: 100vw;
+      margin: 0rem 0rem;
+
+    }
+    img{
+      max-width: 100vw;
+      margin-top: 2rem;
+    }
+    .backContainer{
+      max-width: 100vw;
+    }
+    .roles{
+      margin-bottom: 0rem;
+    }
+    .projectItem{
+      width: 70%;
+      margin: 0vw;
+      margin-top: 0rem;
+      align-self: center;
+    }
+    .backArrow{
+      scale: 1.8;
+    }
+    .backContainer{
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    h1{
+      margin-bottom: 2rem;
+    }
+  }
 </style>
