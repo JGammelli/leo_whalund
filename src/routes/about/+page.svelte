@@ -17,11 +17,13 @@ import { about } from '$lib/data/projects';
     p{
         margin-top: 3rem;
         line-height: 2;
+        margin-bottom: 5rem;
     }
     img {
         border-radius: 50%;
         width: 20vw;
     }
+ 
     @media (max-width: 1024px) {
         div{
             padding: 0rem;
@@ -31,6 +33,7 @@ import { about } from '$lib/data/projects';
             margin-top: 3rem;
             line-height: 2;
             padding: 3rem;
+            margin-bottom: 0;
         }
         img {
             border-radius: 50%;
