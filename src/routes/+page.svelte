@@ -8,13 +8,16 @@ import { projects } from '$lib/data/projects';
 		{#each projects as project}
             <div class="projectContainer">
 				<div class="project">
+					
 					<div class="img" style= {`background: url('http://drive.google.com/uc?export=view&id=${project.image}') no-repeat; background-size: cover;`}>
 						<div class="svg">				
-							<div class="text">
-								<h2>
-									<a href={`/project/${project.title}`}>{project.title}</a>
-								</h2>
-								<p>{project.content}</p>
+							<div class="textContainer">
+								<div class="text">
+									<h2>
+										<a href={`/project/${project.title}`}>{project.title}</a>
+									</h2>
+									<p>{project.content}</p>
+								</div>
 							</div>
 							<div class="pointer">
 								<a href={`/project/${project.title}`}>
@@ -37,7 +40,7 @@ import { projects } from '$lib/data/projects';
 
 <style>
 	.svgPointer rect, path{
-		fill: #ffffff2a;
+		fill: #021826de;
 		stroke: #B58A4E;
 	}
 	.container{
@@ -62,24 +65,28 @@ import { projects } from '$lib/data/projects';
 		height: 100%;
 	}
 	.svg{
-		background: url('http://drive.google.com/uc?export=view&id=1ZzgBiXHL1s0EP4pnHgEJ4TeWjkR6HFz3') no-repeat;
-		background-size: cover;
 		position: relative;
 		max-width: 794px;
 		height: 100%;
 		object-fit: fill;
 	}
-	.text{
+	.textContainer{
 		position: absolute;
-		bottom: 2vw;
-		left: 1vw;
+		bottom: 0vw;
+		left: 0vw;
 		text-align: start;
+		background-color: #021826de;
+		border: 2px solid #B58A4E;
+		width: 100%;
+	}
+	.text{
+		padding: 1vw;
 	}
 	.pointer{
 		position: absolute;
-		bottom: .8vw;
-		right: 1.8vw;
+		right: 0vw;
   		transform: scaleX(-1);
+		padding: 1vw;
 	}
 	.svgPointer:hover{
 		scale: 1.3;

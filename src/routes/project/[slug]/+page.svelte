@@ -1,4 +1,6 @@
 <script>
+  import { projects } from '$lib/data/projects';
+
   /** @type {import('./$types').PageData} */
   export let data;
   let activeProgramming = true;
@@ -87,9 +89,13 @@
       {/if}
 
       {#if activeProgramming}
+      <div class="text">
         <p class="content">{data.programText}</p>
+      </div>
         {:else}
-        <p class="content">{data.designText}</p>
+        <div class="text">
+          <p class="content">{data.designText}</p>
+        </div>
       {/if}
       {#if data.link !== undefined}
         <a class="link" href="{data.link}" target="blank"> See more  
@@ -100,13 +106,16 @@
       {/if}
     </div>
     <div class="projectItem">
-       <img src={`http://drive.google.com/uc?export=view&id=${data.image}`} alt="Methusela">
+       <img src={`http://drive.google.com/uc?export=view&id=${data.image}`}>
     </div>
   </div>
   
 </div>
  
 <style>
+  .text{
+    white-space: pre-wrap;
+  }
   rect{
     fill: #ECE8E1;
   }
