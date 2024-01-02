@@ -98,7 +98,21 @@
         </div>
       {/if}
       {#if data.link !== undefined}
-        <a class="link" href="{data.link}" target="blank"> See more  
+        <a class="link" href="{data.link}" target="blank">Read more and view the code on Github
+          <svg width="16" height="6" viewBox="0 0 16 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.35935 2.99999H14.6407M14.6407 2.99999L12.3731 5.21354M14.6407 2.99999L12.3731 0.786438" stroke="#878787" stroke-linecap="round"/>
+          </svg>
+        </a>
+      {/if}
+      {#if data.linkItch !== undefined}
+        <a class="link" href="{data.linkItch}" target="blank">Read more on Itch.io
+          <svg width="16" height="6" viewBox="0 0 16 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.35935 2.99999H14.6407M14.6407 2.99999L12.3731 5.21354M14.6407 2.99999L12.3731 0.786438" stroke="#878787" stroke-linecap="round"/>
+          </svg>
+        </a>
+      {/if}
+      {#if data.linkDownload !== undefined}
+        <a class="link" href="{data.linkDownload}" target="blank">Download game
           <svg width="16" height="6" viewBox="0 0 16 6" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.35935 2.99999H14.6407M14.6407 2.99999L12.3731 5.21354M14.6407 2.99999L12.3731 0.786438" stroke="#878787" stroke-linecap="round"/>
           </svg>

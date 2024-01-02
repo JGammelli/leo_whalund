@@ -39,6 +39,7 @@ import { projects } from '$lib/data/projects';
 
 
 <style>
+
 	.svgPointer rect, path{
 		fill: #021826de;
 		stroke: #B58A4E;
