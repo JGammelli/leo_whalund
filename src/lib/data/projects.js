@@ -20,11 +20,54 @@ export const projects = [
     image: `188GqRjTAx1XpSx_WRUrOpkOJRSY8nUQo`,
     isDesign: false,
     isProgram: true,
-    programText: `An online tactical shooter akin to CS and Valorant. A side project I worked on part time while having courses.
-    The team goal was to challenge ourselves, while creating a game that could serve as a base for an eventually commercial product.
+    programText: `An online tactical shooter akin to CS and Valorant. A side project I worked on part time while having courses. The team goal was to challenge ourselves, while creating a game that could serve as a base for an eventually commercial product.
     
     This project was started as a graduation project for designers, meaning they could work fulltime on the project. I joined in as one of 3 programmers helping out with the project while still having courses on the side. 
-    `,
+    
+Setting up the team for success
+
+A slightly clickbait-y title with just a hint of hubris, but it describes how I worked within the project. 
+
+With a team full of designers that could work full time and programmers that could only work part time, we knew that a lot of work would fall to our (very skilled) technical designers. The problem with this is that larger systems sometimes tend to look like something straight from the kitchen in an Italian restaurant. Especially when fully built in blueprints. To prevent this I built the base for weapons in our game so that designers could easily create and add behavior-blueprints to them without having to poke around in the weapons themselves (aka Components). Recoil can be created for our weapons by simply creating a blueprint and defining what should happen in an inherited function. Then we can simply select to add this UObject class in a dropdown menu in our weapon and recoil just works (assuming the recoil itself is done right). 
+
+The system is built around the fact that weapons are (as with a surprising amount of other common game mechanics) essentially split into three parts:
+
+When should I do thing?
+How do I do thing?
+What happens now that I have done thing?
+
+(Thing, in this case, being shooting)
+
+The WHEN
+Constraints we call them, the class that handles if a weapon is allowed to shoot or not when the player sends us shoot input. Here we place things such as Fire Rate and Ammunition. When the weapon wants to know if it is allowed to shoot, it simply CheckConstraints() if they all return true (meaning we are allowed ofcourse).  
+
+The HOW
+This part is broken down into two classes: Aim modifiers and Bullet Spawners. 
+
+Aim Modifiers affect where we shoot and include things such as movement error and spread. These modifiers gets passed a Vector AimDirection by reference that they modify in the way they want before sending it forth to BulletSpawners.
+
+The actual shooting. The single trace, multi trace or multiple multi traces that we wanna do when shooting. All put together under the collective name “Bullet Spawner”. Unlike our constraints or Aim modifiers, a weapon can only have one bullet spawner, if we want to shoot multiple bullets we do that inside our bullet spawner. This is meant for [Image]
+
+
+
+
+When developing tools for designers to work with I focus on three points:
+
+Flexibility 
+Designers should be able to use the tool to create whatever they set their mind too
+(Few limitations)
+
+Scalability
+We should be able to add behaviors and functionality without having to modify or accidently break existing ones. More or less, follow the Open-Closed principle.
+
+Understandability
+This one is tricky compared to the other two points, as it is not as much related to code. Designers must be able to easily understand the tool and be able to quickly pick it up and use it to iterate on their designs.
+
+             
+
+While scalability and flexibility (to some degree) can be achieved by just making sure your following SOLID, understandability is not. 
+[Image]
+`,
     link: "https://github.com/LostmyCigar/Vanagandar"
   },
   {
@@ -33,8 +76,50 @@ export const projects = [
     image: `1r-xOOLHDq7YZN_FodZrq85ltd-Njt10q`,
     isDesign: false,
     isProgram: true,
-    programText: `Having betrayed its allies, a wraith now seeks to escape the tomb with its newfound immortality.
-    Tomb of Alar is a twin stick shooter worked on full time over the course of 4 weeks. The team goal was to deliver a polished game in a short timeframe`,
+    programText: `Having betrayed its allies, a wraith now seeks to escape the tomb with its newfound immortality. Tomb of Alar is a twin stick shooter worked on full time over the course of 4 weeks. The team goal was to deliver a polished game in a short timeframe.
+    
+    Note: I will not be writing detailed information code implementation here. This will be more about the code structure and how we worked as a team.
+
+Some things I did gameplay wise here and would live to talk about in person though are: 
+Projectile movement 
+Targeting, Turning, Accelerating, Deaccelerating, etc
+
+Projectile Spawning
+Handle Input, Aim direction, Aim offsets, Multispawning, etc
+
+About the Game
+Tomb of Alar's creation was dictated by deadlines. We decided early on as a group that we wanted a polished product and to achieve that, we set our own deadline for the game of 2 weeks. After those two weeks we wanted to have the game locked in feature wise so we could just focus on polishing what we had created thus far.
+
+This needs to be flexible, fast!
+Creating the shooting for a twinstick shooter is quite hard designwise. Being the absolute core-mechanic of the game, it completely dictates whether the end product feels good to play or not. Because of this we wanted designers to be able to try out and iterate over multiple different designs for the shooting. This becomes a challenge of teamwork and effective communication. Designers were working with the tool as soon as it became possible and new features had to be created on demand. We needed clear communication on what features needed prioritization over others as well as me giving instruction on how to use everything. 
+
+The Good, 
+Data assets for everything. Well, two things. Weapon behavior and Projectile behavior. This creates a lot of flexibility, the biggest being the possibility to easily swap data assets on demand, completely changing the behavior of projectiles during their lifetime. This built the possibility of creating very complex weapons since we can link projectile behaviors together by having the keep track of the next behavior and so on. Together with bullets themselves being able to create new bullets after a certain time or on destruction we can create almost any type of projectile imaginable (assuming we also have the movement required for it).
+Add two different shooting gifs here 
+
+
+The Bad 
+As someone who very much enjoys clean and maintainable code, this project pained me a bit. If I had to place it somewhere in my favorite triangle it had to be around here:
+
+[Image]
+
+A big chunk of the code is in the same few files and it would be hard for someone who hasn't worked in them to just jump in and take over.
+
+I will not go into details of stuff I do not like with my code (This is a portfolio after all) but instead I'll move to a chapter that is closely related to mistakes. 
+
+and The Ugly
+(Actually learnings, but that doesn't create a movie reference)
+
+You can always skip this part and go straight into the Vanagandr tab, as that is the result of my learnings here. 
+
+I'll start off by saying that I do not regret my fast made spaghetti. It was what the project required and it works bug free (to the best of our knowledge). But towards the end of the project I felt how the code was beginning to catch up to me and would need a complete rewrite. 
+
+In my previous projects I’ve always tried to do a more component-based structure of the code and this project solidified that approach for me even more. C++ was created for a reason. A weapon class should maybe handle when we shoot and what we shoot, but does it really need to know every single detail. Pack those down into small classes and let them handle themselves. The weapon class can handle a few abstract parent classes instead and tell them when to do their stuff.
+
+
+Working with Designers
+As soon as designers could start working with shooting I created a small guide on how it all worked and how to create new “weapons” in blueprints. This was so that designers could have something to follow while working and did not require me to repeat explanations multiple times. After a while this guide became outdated, but at that point everyone working with weapons had a grasp on how they worked so that it was no longer needed. 
+[Image]`,
     link: "https://github.com/LostmyCigar/TombOfAlar",
   },
   {
@@ -53,7 +138,18 @@ export const projects = [
     image: `1Qyb4MT1I7j3AWb3SIGwdjiMBOaWy9p55`,
     isDesign: false,
     isProgram: true,
-    programText: `Follow a girl and her dog as they explore an old apartment and learn of its past.`,
+    programText: `Follow a girl and her dog as they explore an old apartment and learn of its past.
+    I can't cover everything in this tiny space. Here is some of the stuff I did that I won't be covering on this page, but would love to go over in person:
+
+Level Design
+Puzzle Design
+Handling input devices for Co-Op
+
+
+
+Many Hats
+Zhi is a team project that, due to untimely sickness amongst our team members, had me doing a mixture of design and programming work.
+`,
     link: "https://github.com/LostmyCigar/Zhi",
   },
   {

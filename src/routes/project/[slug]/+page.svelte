@@ -163,10 +163,9 @@
 	}
 	.projectContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 	}
   .projectItem{
-		width: 50%;
     margin: 2vw;
 		margin-top: 8rem;
   }
