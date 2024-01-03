@@ -16,11 +16,11 @@ export const contact = {
 export const projects = [
   {
     title: `Vanagandar`,
-    content: `Programming, Systems, Team, Unreal, Tactical Shooter`,
+    content: `Programming, Systems, Team, Unreal, Tactical Shooter, Recent`,
     description: `An online tactical shooter akin to CS and Valorant. A side project I worked on part time while having courses.
     The team goal was to challenge ourselves, while creating a game that could serve as a base for an eventually commercial product.
     `,
-    image: `188GqRjTAx1XpSx_WRUrOpkOJRSY8nUQo`,
+    image: `18xnhkRmWtEDugdyAd4aUOPpMhc_8AZZt`,
     isDesign: false,
     isProgram: true,
     jumpToCode: true,
@@ -92,7 +92,7 @@ The *AimModifier* class (Constraints and BulletModifiers look very similar to th
     description: `Having betrayed its allies, a wraith now seeks to escape the tomb with its newfound immortality.
     Tomb of Alar is a twin stick shooter worked on full time over the course of 4 weeks. The team goal was to deliver a polished game in a short timeframe.    
     `,
-    image: `1r-xOOLHDq7YZN_FodZrq85ltd-Njt10q`,
+    image: `1S8hD6ltgHiwBnPqFEZGyZqS9bleXjxrl`,
     isDesign: false,
     isProgram: true,
     jumpToCode: true,
@@ -149,7 +149,7 @@ As soon as designers could start working with shooting I created a *small guide*
     title: `Methusela`,
     content: `Design, Combat, Team, Unity, TopDown`,
     description: `Methuselah is a topdown roguelike where the player fights as the force of the forest against the machines that want to tear it down.`,
-    image: `1Kn2v6yi7PUFK3W92TGJZmYLwmcpK-uCW`,
+    image: `1JpdAmKyaP-6qSRZ2PTm_9V_DTqQqplB_`,
     isDesign: true,
     isProgram: false,
     designText: `Methuselah is a 10-week project I worked on together with other students from different disciplines. I worked as Lead Designer and was responsible for the overall design of the game. Spending most of my time getting the combat and feel of the game to be the best it could with the tools available. Although it has many flaws (to be expected from a game made in 10 weeks) I am still happy with what we achieved.
@@ -166,7 +166,7 @@ As soon as designers could start working with shooting I created a *small guide*
     title: `Zhi`,
     content: `Programming, Design, Gameplay, Team, Unity, Co-Op, Puzzle`,
     description: `Follow a girl and her dog as they explore an old apartment and learn of its past by solving puzzles.`,
-    image: `1Qyb4MT1I7j3AWb3SIGwdjiMBOaWy9p55`,
+    image: `1dpFGfVLrgH24yRtknFfHTUcD4e-aGbqX`,
     isDesign: false,
     isProgram: true,
     programText: `I can't cover everything in this tiny space. Here is some of the stuff I did that I won't be covering on this page, but would love to go over in person:
@@ -232,8 +232,37 @@ This time we are not lerping without a license and the result looks like this:
     image: `1GqQ_-6TSdNQXa2Tnm_9PgVauPpEloSss`,
     isDesign: false,
     isProgram: true,
-    programText: `Bring a friend and find the city's hazardous treasures! 
-    2 players control 3 robots, each with a different ability, clean up the city before the timer runs out!`,
+    programText: `This project was made over a total of 5 work days in 2022 and contains some propper abominations (including but not limited to: 5 badly made singletons). 
+
+    I will not go over the code on this page, but on the bottom of this page I have included a git link to the entire unity project. 
+    
+    If asked I would love to go through the project, code review myself and roast past me.
+    
+     Here are the things I did in this project:
+    - Robot movement
+    - Camera movement
+    - Robot swapping
+    - Input handling 
+    
+    ##*A top down car game?*##
+    “Robots are not humans”. A controversial statement if you were playing Detroit Become Human. Thankfully for me Project Plutonium operates under different bounds. 
+    
+    Getting the movement right for our game was a mixture of design and programming. In Project Plutonium the player(s) controls three, semi-humanoid robots. They are small and agile, but still go around on wheels. A mixture of car and human. When humanoid creatures move from forward to right they stop their forward momentum, turn to the right and then move forwards again. This also happens to be how movement feels in many games and how we first approached movement in ours. The player could move left, right, up and down and it felt… wrong. 
+    
+    After some tinkering with the movement a bit I started trying out more car-like movement and the result was an improvement. Now, top down car games exist but truthfully, I haven't played them. The cars in games I know can turn left and right, and how fast they turn is based on how fast they are moving. This all makes sense for cars, but not really for our characters. So I kept tinkering until I landed on movement that feels like a proper blend, fit for top down gameplay.
+    
+    !!http://drive.google.com/uc?export=view&id=1DpKSFfahQ06E_EG98r9ZzD3bTtb0pBwo!!
+
+    What I ended up with was having the characters move only forward, they have fast acceleration and a turn based on the camera direction. This means that if the player presses “S” or the down key, the character will turn south.
+
+    Here are some examples of other mechanics I made:
+
+    !!http://drive.google.com/uc?export=view&id=1mOTY4vbUedc0U8KFkugosvGdDzC9BwS7!!
+    Adaptive camera
+
+    !!http://drive.google.com/uc?export=view&id=1nNxSkcnXtgq1IcohmrUbw64CT7Gru60X!!
+    Robot swapping
+    `,
     link: "https://github.com/LostmyCigar/ProjectPlutonium",
   },
   // {

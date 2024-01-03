@@ -44,7 +44,7 @@ import { projects } from '../lib/data/projects';
 		font-weight: 700;
 	}
 	.tag{
-		font-size: .6vw;
+		font-size: .9rem;
 		font-weight: 700;
 		color: #B58A4E;
 	}
@@ -109,6 +109,7 @@ import { projects } from '../lib/data/projects';
 
 	a:hover{
 		color: #B58A4E;
+		font-size: 1.5rem;
 	}
 
 	
