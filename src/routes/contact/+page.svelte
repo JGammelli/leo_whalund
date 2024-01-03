@@ -43,6 +43,10 @@ import { contact } from '../../lib/data/projects';
     a:hover{
         color: #ECC977;
     }
+    a{
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+    }
     .container{
         padding: 5rem;
         width: 756px;
