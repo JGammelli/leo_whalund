@@ -15,7 +15,8 @@ import { projects } from '../lib/data/projects';
 									<h2>
 										<a href={`/project/${project.title}`}>{project.title}</a>
 									</h2>
-									<p>{project.content}</p>
+									<p class="description">{project.description}</p>
+									<p class="tag">{project.content}</p>
 								</div>
 							</div>
 							<div class="pointer">
@@ -38,7 +39,15 @@ import { projects } from '../lib/data/projects';
 
 
 <style>
-
+	h2 a{
+		color: #B58A4E;
+		font-weight: 700;
+	}
+	.tag{
+		font-size: .6vw;
+		font-weight: 700;
+		color: #B58A4E;
+	}
 	.svgPointer rect, path{
 		fill: #021826de;
 		stroke: #B58A4E;
@@ -47,7 +56,7 @@ import { projects } from '../lib/data/projects';
 		display: flex;
 		justify-content: space-around;
 		flex-flow: row wrap;
-		margin: 5rem 19vw;
+		margin: 5rem 15vw;
 		text-align: center;
 
 	}
@@ -57,12 +66,13 @@ import { projects } from '../lib/data/projects';
 	}
 	.project{
 		margin: 0 2vw;
-		height: 15vw;
-		border: 2px solid #B58A4E;
+		height: 17vw;
 	}
 	.img{
 		max-width: 794px;
 		height: 100%;
+		border: 2px solid #B58A4E;
+
 	}
 	.svg{
 		position: relative;

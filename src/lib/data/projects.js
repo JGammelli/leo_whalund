@@ -1,7 +1,7 @@
 export const about = {
   title: "Hi, I'm Leo!",
   content:
-    "I have had a passion for games ever since my parents bought a Gameboy Advance and Pokemon LeafGreen cartridge. I love crafting mechanics, testing and improving them until they play and feel the way they should. I am a social, happy and driven person who works best in teams where communication is free flowing and clear. I am looking for a place where I can grow as a designer and work together with a close knit team.",
+    "I have had a passion for games ever since my parents bought a Gameboy Advance and Pokemon LeafGreen cartridge. I love crafting mechanics, testing and improving them until they play and feel the way they should. I am a social, happy and driven person who works best in teams where communication is free flowing and clear. I am looking for a place where I can grow as a programmer and work together with a close knit team.",
   image: "1gmEPZpe8tS0CIZJL27YgJwdrjNYwLruq",
 };
 
@@ -17,6 +17,9 @@ export const projects = [
   {
     title: `Vanagandar`,
     content: `Programming, Systems, Team, Unreal, Tactical Shooter`,
+    description: `An online tactical shooter akin to CS and Valorant. A side project I worked on part time while having courses.
+    The team goal was to challenge ourselves, while creating a game that could serve as a base for an eventually commercial product.
+    `,
     image: `188GqRjTAx1XpSx_WRUrOpkOJRSY8nUQo`,
     isDesign: false,
     isProgram: true,
@@ -31,10 +34,10 @@ export const projects = [
     
     Here is how stuff looks for designers:
     !!http://drive.google.com/uc?export=view&id=1Pv7qC4JiNooF-Y2CcVXGKQMaKv1wKXkb!!
-
     Weapon effects are deprecated, please ignore :)
+
     !!http://drive.google.com/uc?export=view&id=1-dMV3JQDQSCo5bBWQEQs3HdbJrCHsHLp!!
-    Designers can now add and edit their blueprint behaviors inside the weapon
+    Designers can now add and edit their blueprint behaviors inside the weapon.
     
     ##*The system*##
     The system is built around the fact that weapons are (as with a surprising amount of other common game mechanics) essentially split into three parts:
@@ -73,9 +76,11 @@ Thanks to the nifty UProperty specifier “Instanced” our UObject classes are,
 Our *WeaponBehaviour* base:
 
 This class could use the DefaultToInstanced specifier. But since this system is heavily influenced by Unreal Engine's own InputActions and triggers, I decided to keep it similar.
+
 !!http://drive.google.com/uc?export=view&id=1bSfnZ-U_Hw2LkwJVQ-xh-FaZKZV4pLhm!!
 
 The *AimModifier* class (Constraints and BulletModifiers look very similar to this):
+
 !!http://drive.google.com/uc?export=view&id=1KBQAtsr3ieW-UVv3arcbWVHvXcVAYTZv!!
 
 `,
@@ -84,13 +89,16 @@ The *AimModifier* class (Constraints and BulletModifiers look very similar to th
   {
     title: `Tomb of Alar`,
     content: `Programming, Tools, Team, Unreal, TopDown`,
+    description: `Having betrayed its allies, a wraith now seeks to escape the tomb with its newfound immortality.
+    Tomb of Alar is a twin stick shooter worked on full time over the course of 4 weeks. The team goal was to deliver a polished game in a short timeframe.    
+    `,
     image: `1r-xOOLHDq7YZN_FodZrq85ltd-Njt10q`,
     isDesign: false,
     isProgram: true,
     jumpToCode: true,
     programText: `*Note:* I will not be writing detailed information code implementation here. This will be more about the code structure and how we worked as a team.
 
-    Some things I did *gameplay wise* here and would live to talk about in person though are: 
+    Some things I did *gameplay wise* here and would love to talk about in person though are: 
     *Projectile movement* 
     Targeting, Turning, Accelerating, Deaccelerating, etc
     
@@ -108,8 +116,8 @@ The *AimModifier* class (Constraints and BulletModifiers look very similar to th
 
     *The Good,* 
 Data assets for everything. Well, two things. Weapon behavior and Projectile behavior. This creates *a lot of flexibility*, the biggest being the possibility to easily swap data assets on demand, completely changing the behavior of projectiles during their lifetime. This built the possibility of creating very complex weapons since we can link projectile behaviors together by having the keep track of the next behavior and so on. Together with bullets themselves being able to create new bullets after a certain time or on destruction we can create almost any type of projectile imaginable (assuming we also have the movement required for it).
-!!http://drive.google.com/uc?export=view&id=1DbeNVa0rvHpNL4YH4Gtij3vzc86-xFgV!!
-!!http://drive.google.com/uc?export=view&id=1C72f2Lnfzonby2VPCdk4UKwxUmK4coel!!
+!!http://drive.google.com/uc?export=view&id=1DbeNVa0rvHpNL4YH4Gtij3vzc86-xFgV!! 
+!!http://drive.google.com/uc?export=view&id=1C72f2Lnfzonby2VPCdk4UKwxUmK4coel!! 
 
 *The Bad*
 As someone who very much enjoys clean and maintainable code, this project pained me a bit. If I had to place it somewhere in my favorite triangle it had to be around here:
@@ -122,7 +130,7 @@ I will not go into details of stuff I do not like with my code (This is a portfo
 *and The Ugly*
 (*Actually learnings*, but that doesn't create a movie reference)
 
-You can always skip this part and go straight into the *Vanagandr* tab, as that is the result of my learnings here. 
+You can always skip this part and go straight into the Vanagand tab, as that is the result of my learnings here. 
 
 I'll start off by saying that I do not regret my fast made spaghetti. It was what the project required and it *works bug free* (to the best of our knowledge). But towards the end of the project I felt how the code was beginning to catch up to me and would need a complete rewrite. 
 
@@ -140,6 +148,7 @@ As soon as designers could start working with shooting I created a *small guide*
   {
     title: `Methusela`,
     content: `Design, Combat, Team, Unity, TopDown`,
+    description: `Methuselah is a topdown roguelike where the player fights as the force of the forest against the machines that want to tear it down.`,
     image: `1Kn2v6yi7PUFK3W92TGJZmYLwmcpK-uCW`,
     isDesign: true,
     isProgram: false,
@@ -156,6 +165,7 @@ As soon as designers could start working with shooting I created a *small guide*
   {
     title: `Zhi`,
     content: `Programming, Design, Gameplay, Team, Unity, Co-Op, Puzzle`,
+    description: `Follow a girl and her dog as they explore an old apartment and learn of its past by solving puzzles.`,
     image: `1Qyb4MT1I7j3AWb3SIGwdjiMBOaWy9p55`,
     isDesign: false,
     isProgram: true,
@@ -178,7 +188,7 @@ As soon as designers could start working with shooting I created a *small guide*
     
     Then we have the pivot point. The pivot point is a child of the base transform and moved a distance from it (to the place we want our camera to be).
     
-    When input is received we rotated the base, unity does its matrix transformations and *voila*, the camera goes where the player wants it to.
+    When input is received we rotated the base, unity does its matrix transformations and voilà, the camera goes where the player wants it to.
     !!http://drive.google.com/uc?export=view&id=1NORx9e6OLbhD-aMDWBGD2TwLwywFhdga!!
     !!http://drive.google.com/uc?export=view&id=1xns3M-4FBQQIFDtCG5T3qVXDEpxQ-XfX!!
     Camera Handling is of course run in LateUpdate()
@@ -215,6 +225,10 @@ This time we are not lerping without a license and the result looks like this:
   {
     title: `Project plutonium`,
     content: `Programming, Gameplay, Team, Unity, Co-Op`,
+    description: `Bring a friend and find the city's hazardous treasures! 
+    2 players control 3 robots, each with a different ability, clean up the city before the timer runs out!
+    `,
+
     image: `1GqQ_-6TSdNQXa2Tnm_9PgVauPpEloSss`,
     isDesign: false,
     isProgram: true,
@@ -222,18 +236,19 @@ This time we are not lerping without a license and the result looks like this:
     2 players control 3 robots, each with a different ability, clean up the city before the timer runs out!`,
     link: "https://github.com/LostmyCigar/ProjectPlutonium",
   },
-  {
-    title: `The Solace`,
-    content: `Programming, Team, Unreal, Puzzle`,
-    image: `1zOmZokAN5ktXPU7RgntgDrV_rEw8WysJ`,
-    isDesign: false,
-    isProgram: true,
-    programText: `Explore a misty forest as you solve puzzles and escape the island.`,
-    link: "",
-  },
+  // {
+  //   title: `The Solace`,
+  //   content: `Programming, Team, Unreal, Puzzle`,
+  //   image: `1zOmZokAN5ktXPU7RgntgDrV_rEw8WysJ`,
+  //   isDesign: false,
+  //   isProgram: true,
+  //   programText: `Explore a misty forest as you solve puzzles and escape the island.`,
+  //   link: "",
+  // },
   {
     title: `Aastra`,
     content: `Solo, Small project, Gamemaker, Platformer`,
+    description: `A platformer filled with tricky jumps. The very first game I made.`,
     image: `1tV1FofE_wLxIuSPqYcaol6zRz1ZvaItl`,
     isDesign: true,
     isProgram: false,
@@ -246,12 +261,12 @@ This time we are not lerping without a license and the result looks like this:
   {
     title: `Bouncing Ball`,
     content: `Solo, Small project, Gamemaker, Platformer`,
+    description: `A unique game where you control a bouncing ball and platforms as you navigate through 6 very different levels.`,
+
     image: `1TcxxFg_hPrJemkzDMOx8au20TR1pclrC`,
     isDesign: true,
     isProgram: false,
-    designText: `A unique game where you control a bouncing ball and platforms as you navigate through 6 very different levels.
-      
-    A challenging game where the player tries to maneuver both moving platforms and a bouncing ball at the same time. Using these simple mechanics I tried creating challenges based on different elements; timing, precision and a puzzle. It’s a short and simple game that could, with a few adjustments, work well on mobile.`,
+    designText: `A challenging game where the player tries to maneuver both moving platforms and a bouncing ball at the same time. Using these simple mechanics I tried creating challenges based on different elements; timing, precision and a puzzle. It’s a short and simple game that could, with a few adjustments, work well on mobile.`,
     programText: "Some Program text here",
     linkDownload:
       "https://drive.google.com/file/d/1eveHOMsnAGDD3V2LAl2RvD9iPa0ja_yk/view?usp=sharing",
@@ -259,16 +274,112 @@ This time we are not lerping without a license and the result looks like this:
   {
     title: `Behemoth Battles`,
     content: `Solo, Small project, Unity, Card battler`,
+    description: `An attempt at bringing over a board game (created by myself) to the digital world in order to create and explore more transformative mechanics.`,
+
     image: `1nZvwU0EfLlZ4w8j3l1tRK_aUHzB1lr1w`,
     isDesign: true,
     isProgram: false,
-    designText:
-      "An attempt at turning a board game I designed into a computer game. A result of me wanting to explore some key mechanical differences in online and offline card games and a project I’m still working on from time to time. It is still at the stage where I am mostly translating the board game over to Unity, it is playable with the core mechanics implemented. Since it is made mainly for testing out mechanics, the balance is currently a bit off and it is lacking the visual clarity that the board game has. I am hoping to start testing with more transformative mechanics soon, such as cards being able to attack their own teammates for benefits and buffs.",
+    designText: `An attempt at turning a board game I designed into a computer game. A result of me wanting to explore some key mechanical differences in online and offline card games and a project I’m still working on from time to time. It is still at the stage where I am mostly translating the board game over to Unity, it is playable with the core mechanics implemented. Since it is made mainly for testing out mechanics, the balance is currently a bit off and it is lacking the visual clarity that the board game has. I am hoping to start testing with more transformative mechanics soon, such as cards being able to attack their own teammates for benefits and buffs.
+    
+    The goal is to make a game filled with synergies. Making a game where most of the mechanics are multiplicative and work well with each other. I decided to use a board game that I had already made so I could fully focus on the cards and their mechanics and enhance the gameplay through them. While it is a work in progress the balance is still way off. Behemoth Battles is a translation of a board game where the numbers and mechanics are a lot more grounded. To be able to bring in a lot of multiplicative mechanics I started with doubling the Hp of every monster card, hoping to avoid game states where one player snowballs too fast, making the outcome decided and predictable for too long. Unfortunately this has made the games start way too slow instead. The issue is that the core mechanics doesn’t support a game that wants to build up and evolve during a single session, they are more fitting of a game that stays similar the way throughout, the way the board game does. That being said, I don't think that I’ll change or even tune the core gameplay to align with the goal. This game is more of an experiment to see how I can create mechanics that lets players be creative, it doesn’t need to be good in any other area.
+    
+    !!http://drive.google.com/uc?export=view&id=1OPYq5SDtsPnzJ-f_ehCRJVwMuyb9s44W!!
+    
+    ##*Behemoth Battles: Board Game Rules*##
+    Recruit, mutate and then attack with your behemoths.
+
+    Like the evil genius you are, you have created a weapon so powerful that it guarantees world domination! The Gigantifier! Or, I mean, if it wasn’t for the fact that your, almost as evil, long time rival somehow managed to invent the same thing… To find out which one of you is most deserving of world domination you have decided to duel it out in the middle of nowhere. May the best supervillain win!
+
+    ##*Goal of the game*##
+    The goal is to prove that YOU’RE the one deserving the title “Evil Overlord Supreme”. The game ends when one player no longer has any behemoths in play.
+
+    ##*Setting up*##
+    Start with setting up the table the following way:
+    !!http://drive.google.com/uc?export=view&id=12cYK4uIHCf4a5OrvvykoaeaCFuRKLjBf!!
+
+    Choose the player starting.
+    The player going second then starts with choosing which one of the three face-up behemoths they want to start with.
+    The starting player then chooses one of the remaining two.
+    Turn another behemoth card up so that there are two upwards facing cards.
+    The starting player may then begin their first turn.
+    !!http://drive.google.com/uc?export=view&id=1SR3eNo21ZAkfNJ96PloivU_ZS9Gp9Iff!!
+
+    ##*Turn overview*##
+    Choose the player starting.
+    Eventual weapons are played before doing anything else during your turn.
+    You can, during any time while it's your turn, recruit behemoths, buy Mutation Cards and Weapons as long as you have enough currency for it.
+    The only required action during a turn is choosing an action from the Actionboard.
+
+    ##*The Actionboard*##
+    The Actionboard consists of three actions:
+
+    Mutation Points
+    -Gain Mutation points
+
+    Recruitment points
+    -Gain Recruitment points
+
+    Attack
+    -Attack enemy behemoths
+
+    ##*On every action there are Power tokens.*##
+    Power tokens decide how powerful each of the actions are. Any time an action is chosen the players must remove all Power tokens from that action and place 1 Power token on the actions not chosen during that turn.
+
+    Example:
+    !!http://drive.google.com/uc?export=view&id=10zuHv_wMz_pNpbd44dCC-NU6uAxh92_g!!
+    
+    There are 2 Power tokens on Attack, 1 on Mutation points and 0 on
+    Recruitment points.
+
+    Player 1 selects Attack.
+    !!http://drive.google.com/uc?export=view&id=1DP-lLQlv7q72MbcrlszcO_OjH8p2lu2-!!
+
+    Now that it is Player 2s turn, all the Power tokens are removed from Attack while 1 Power token has been added to both Recruitment points and Mutation points.
+    Player 2 selects Recruitment points
+    !!http://drive.google.com/uc?export=view&id=1pULQ51VYFd5jFHkm5PwMDayAYy8A_YXp!!
+
+    Recruitment points therefore have 0 Power tokens during Player 1s turn. Attack and Mutations points have gained +1 Power token.
+
+    For every Power token placed on an action it gains extra power.
+
+    Mutation Points
+    -Gain +1 Mutation point for every Power token.
+    Example: There are 2 Power tokens on the Mutation points action when it is used: The player receives 1 + 2 Mutation points.
+
+    Recruitment points
+    -Gain +1 Recruitment point for every Power token
+
+    Attack
+    -Each power token grants the player the ability to attack with one additional behemoth. If the player using this action is missing sufficient behemoths to fully utilize this it; the player is granted +1 damage per additional Power token. Example: There are 2 Power tokens on the Attack action and the player using the action has 2 behemoths. The Action gives: (attack action) 1 + 2 (Power tokens ) attacks. Since the player only has 2 behemoths in play there is one redundant attack left. The player can therefore attack with both their behemoths and one of the attacks deals +1 damage. The player can choose which one of the attacks that deals extra damage. The same behemoth may not attack more than once per turn.
+    When attacking, the defender does not deal damage back to the attacker unless it specified that it can.
+
+    ##*Mutation Cards and Card slots*##
+    !!http://drive.google.com/uc?export=view&id=1-LIXFlJdA8P9cm8-ssyDqS8pHuyJd2kA!!
+
+    Mutation cards are bought using Mutation points. The cost is seen in the top-right corner. When a card has been bought, a new one takes its place in the shop from the deck. There should always be 3 Mutation cards available for players to purchase.
+    
+    A player can buy Mutation cards during any time as long as it is still their turn. When a mutation card is bought it is placed on an empty card slot. If the player has no card slot available they do not have the ability to buy Mutation Cards. Card slots can be found at the bottom of Behemoth cards
+    !!http://drive.google.com/uc?export=view&id=1zn0Y2puc5AAhtVx7dArxsF7Yh-G4Aumj!!
+    This behemoth has 1 available card slot.
+
+    ##*Behemoths, recruitment and Weapons*##
+    Behemoths always start with 20 Hp and 2 Atk unless something else is specified on the card. New behemoths can be recruited to fight by your side using Recruitment points. A player can recruit behemoths any time as long as it is their turn. The cost for recruiting behemoths is: 4 for the first behemoth. Then 5 and 6. The cost is based on how many behemoths the player has previously recruited and not on how many behemoths they have in active play. After 3 behemoths have been recruited in addition to the first one, the player can no longer recruit more. Recruitment points are then instead used for buying weapons.
+
+    ##*Weapons*##
+    After a player has recruited 3 behemoths they can no longer recruit more. Recruitment points are then used for buying weapons. Weapons are used at the beginning of a player's turn and can therefore not be bought and used the same turn. Weapons can be used no matter what action the player selects.
+
+    ##*When a behemoths HP reaches 0*##
+    When a behemoths Hp reaches 0 the card is placed at the bottom of the Behemoth card-pile. Any Mutation cards the behemoth had are placed to the side of the player. These cards can be brought back into the game for 2 Mutation points each (the normal cost is irrelevant). Only the player who lost the cards can buy them back. When one player no longer has any behemoths the game ends.
+    
+    GLHF!
+    `,
     programText: "Some Program text here",
   },
   {
     title: `Synergy Shooter`,
     content: `Solo, Small project, Unity, Mobile`,
+    description: `A mobile game created to explore the effect that synergies can have on player experience and overall enjoyment.`,
+
     image: `1eGTQRZgdQG_rfeFuqgaGI6GjwqPC6AyG`,
     isDesign: true,
     isProgram: false,
@@ -282,6 +393,8 @@ This time we are not lerping without a license and the result looks like this:
   {
     title: `Slice Dude`,
     content: `Design, Team, Game-jam, Unity`,
+    description: `A game-jam game about a dude slicing things. When your only tool is a hammer, every problem becomes a nail. Well, when your arms are swords, every problem becomes slice-able.`,
+
     image: `1YEr5ve4C6G0ba99PEzxKcLZ9Wgctn89y`,
     isDesign: true,
     isProgram: false,
