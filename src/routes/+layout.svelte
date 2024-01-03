@@ -5,7 +5,7 @@
 <div class="container">
     <div class="header">
         <h1>Leo Wahlund</h1>
-        <p class="smalTxt">Programmer and Designer</p>
+        <p class="smalTxt">Gameplay Programmer</p>
     </div>
     <div class="navigator">
         <nav>
@@ -130,8 +130,9 @@
 	:global(body){
 		background-color: #121824;
 		color: #ECE8E1;
-        background: url('http://drive.google.com/uc?export=view&id=1y6DAZU8_9YjqxjN-2r_0dbOm2BZCG4CF') no-repeat;
-
+        background: url('http://drive.google.com/uc?export=view&id=1pvlflhccoI5NXL85RlmMbfru9K6u3Oqf') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
 	}
 	:global(*){
 		margin: 0 auto;

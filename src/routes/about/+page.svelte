@@ -1,5 +1,5 @@
 <script>
-import { about } from '$lib/data/projects';
+import { about } from '../../lib/data/projects';
 </script>
 
 <div>

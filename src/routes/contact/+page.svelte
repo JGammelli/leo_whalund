@@ -1,5 +1,5 @@
 <script>
-import { contact } from '$lib/data/projects';
+import { contact } from '../../lib/data/projects';
 </script>
 
 <div class="container">

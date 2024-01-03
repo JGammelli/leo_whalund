@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit";
-import { projects } from "$lib/data/projects";
+import { projects } from "../../../lib/data/projects";
 
 export function load({ params }) {
   const project = projects.find((project) => project.title === params.slug);

@@ -1,6 +1,5 @@
 <script>
-/** @type {import('./$types').PageData} */
-import { projects } from '$lib/data/projects';
+import { projects } from '../lib/data/projects';
 </script>
 
 <div>
