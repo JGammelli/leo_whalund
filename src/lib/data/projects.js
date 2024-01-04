@@ -95,7 +95,6 @@ The *AimModifier* class (Constraints and BulletModifiers look very similar to th
     image: `1S8hD6ltgHiwBnPqFEZGyZqS9bleXjxrl`,
     isDesign: false,
     isProgram: true,
-    jumpToCode: true,
     programText: `*Note:* I will not be writing detailed information code implementation here. This will be more about the code structure and how we worked as a team.
 
     Some things I did *gameplay wise* here and would love to talk about in person though are: 
