@@ -26,6 +26,8 @@
     <path d="M3.00001 1.35934L3.00001 14.6407M3.00001 14.6407L0.786458 12.3731M3.00001 14.6407L5.21356 12.3731" stroke="#878787" stroke-linecap="round"/>
     </svg> 
   </a>
+  {:else}
+  <div></div>
   {/if}
 </div>
 <div class="container">
