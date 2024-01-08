@@ -14,23 +14,25 @@
   //   return content.replace(/\*(.*?)\*/g, '<strong>$1</strong>');
   // }
 </script>
-
-<div class="container">
-  <div class="backContainer">
-    <a href="/">
-      <svg class="backArrow" width="16" height="6" viewBox="0 0 16 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M14.6406 2.99992L1.35932 2.99992M1.35932 2.99992L3.62686 0.786368M1.35932 2.99992L3.62686 5.21347" stroke="#878787" stroke-linecap="round"/>
-      </svg>
-    </a>
-    
-    {#if data.jumpToCode}
-    <a class="jump" href="#code">JUMP DOWN TO THE CODE <svg width="6" height="16" viewBox="0 0 6 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3.00001 1.35934L3.00001 14.6407M3.00001 14.6407L0.786458 12.3731M3.00001 14.6407L5.21356 12.3731" stroke="#878787" stroke-linecap="round"/>
-      </svg> </a>
-    
-      
-    
+<div class="jumpContainer">
+  <a href="/">
+    <svg class="backArrow" width="16" height="6" viewBox="0 0 16 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14.6406 2.99992L1.35932 2.99992M1.35932 2.99992L3.62686 0.786368M1.35932 2.99992L3.62686 5.21347" stroke="#878787" stroke-linecap="round"/>
+    </svg>
+  </a>
+  
+  {#if data.jumpToCode}
+  <a class="jump" href="#code">JUMP DOWN TO THE CODE <svg width="6" height="16" viewBox="0 0 6 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.00001 1.35934L3.00001 14.6407M3.00001 14.6407L0.786458 12.3731M3.00001 14.6407L5.21356 12.3731" stroke="#878787" stroke-linecap="round"/>
+    </svg> 
+  </a>
   {/if}
+</div>
+<div class="container">
+  
+  
+  <div class="backContainer">
+   
   </div>
   <h1>{data.title}</h1>  
   <svg class="pointer"  width="97" height="35" viewBox="0 0 97 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +158,7 @@
   .jump{
     color: #ECC977;
     text-decoration: underline;
-    
+    align-self: flex-end;
   }
   .text{
     white-space: pre-wrap;
@@ -194,6 +196,14 @@
 		margin: 5rem 25rem;
 		text-align: center;
 	}
+  .jumpContainer{
+    text-align: start;
+    /* display: grid;
+    grid-template-columns: 25% 25%; 
+    gap: 50%; */
+    display: flex;
+    width: 100vw;
+  }
 	.projectContainer{
     display: flex;
     flex-direction: column;
@@ -209,13 +219,11 @@
   }
   .backContainer{
     max-width: 1402px;
-    text-align: start;
-    display: grid;
-    grid-template-columns: 25% 25%; 
-    gap: 50%;
+    
   }
   a{
     text-align: start;
+
   }
   .backArrow{
     scale: 1.8;
