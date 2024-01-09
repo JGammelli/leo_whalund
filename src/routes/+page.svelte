@@ -86,7 +86,6 @@ import { projects } from '../lib/data/projects';
 		left: 0vw;
 		text-align: start;
 		background-color: #021826de;
-		border: 2px solid #B58A4E;
 		width: 100%;
 	}
 	.text{
