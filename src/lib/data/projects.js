@@ -2,7 +2,7 @@ export const about = {
   title: "Hi, I'm Leo!",
   content:
     "I have had a passion for games ever since my parents bought a Gameboy Advance and Pokemon LeafGreen cartridge. I love crafting mechanics, testing and improving them until they play and feel the way they should. I am a social, happy and driven person who works best in teams where communication is free flowing and clear. I am looking for a place where I can grow as a programmer and work together with a close knit team.",
-  image: "1gmEPZpe8tS0CIZJL27YgJwdrjNYwLruq",
+  image: "leo.jpg",
 };
 
 export const contact = {
@@ -20,7 +20,7 @@ export const projects = [
     description: `An online tactical shooter akin to CS and Valorant. A side project I worked on part time while having courses.
     The team goal was to challenge ourselves, while creating a game that could serve as a base for an eventually commercial product.
     `,
-    image: `18xnhkRmWtEDugdyAd4aUOPpMhc_8AZZt`,
+    image: `VanagandrMain.gif`,
     isDesign: false,
     isProgram: true,
     jumpToCode: true,
@@ -33,10 +33,10 @@ export const projects = [
     With a team full of designers that could work full time and programmers that could only work part time, we knew that a lot of work would fall to our (very skilled) technical designers. The problem with this is that larger systems sometimes tend to look like something straight from the kitchen in an Italian restaurant. Especially when fully built in blueprints. To prevent this I built the base for weapons in our game so that designers could easily create and add behavior-blueprints to them without having to poke around in the weapons themselves (aka Components). Recoil can be created for our weapons by simply creating a blueprint and defining what should happen in an inherited function. Then we can simply select to add this UObject class in a dropdown menu in our weapon and recoil just works (assuming the recoil itself is done right). 
     
     Here is how stuff looks for designers:
-    !!http://drive.google.com/uc?export=view&id=1Pv7qC4JiNooF-Y2CcVXGKQMaKv1wKXkb!!
+    !!/img/vandesign.png!!
     Weapon effects are deprecated, please ignore :)
 
-    !!http://drive.google.com/uc?export=view&id=1-dMV3JQDQSCo5bBWQEQs3HdbJrCHsHLp!!
+    !!/img/van2.png!!
     Designers can now add and edit their blueprint behaviors inside the weapon.
     
     ##*The system*##
@@ -51,7 +51,7 @@ export const projects = [
     The *WHEN*
     Constraints we call them, the class that handles if a weapon is allowed to shoot or not when the player sends us shoot input. Here we place things such as Fire Rate and Ammunition. When the weapon wants to know if it is allowed to shoot, it simply CheckConstraints() if they all return true (meaning we are allowed ofcourse).  
     
-    !!http://drive.google.com/uc?export=view&id=1T91H7htAJUNadiyI9bH2Anse0TlS72pl!!
+    !!/img/van3.png!!
 
     The *HOW*
     This part is broken down into two classes: Aim modifiers and Bullet Spawners.
@@ -59,7 +59,7 @@ export const projects = [
      
     The actual shooting. The single trace, multi trace or multiple multi traces that we wanna do when shooting. All put together under the collective name “Bullet Spawner”. Unlike our constraints or Aim modifiers, a weapon can only have one bullet spawner, if we want to shoot multiple bullets we do that inside our bullet spawner. Bullet spawners pass on the results of their hits since we are working under the assumption that they are all hitscan. The results then get sent to the server for confirmation. This is done in our weapons Fire() function, in other words, not in our bullet spawner class.
     
-    !!http://drive.google.com/uc?export=view&id=1QzFsGOk3nPCIb_kspzsZEZW9zApSHrVI!!
+    !!/img/van4.png!!
     
     The *What happens now that I have done thing?*
     Camera shake, recoil, dragon coming down from the sky and kidnapping the player. We call it aim modifiers, but in reality, anything that we might want to do now that the player fired its shot goes here. Now, if you look through the code you might notice that this class could technically just be ignored and its behaviors changed into “Bullet Modifiers”. We already have the information we need about the shooting, it no longer matters if the player is rotated 180°, the shot will hit the correct spot all the same. But the reason for this is simply; *structure*. Aim modifiers are (ironically) the things that should not affect our aim direction, why even give them access to it. This is also why we are not using one, larger class for weapon behaviors with 3 different functions for our different types, it reduces the risk of human error. 
@@ -71,17 +71,17 @@ Our Weapons references to its behaviors:
 
 Thanks to the nifty UProperty specifier “Instanced” our UObject classes are, well, instanced and therefore selectable in the Blueprint Details.
 
-!!http://drive.google.com/uc?export=view&id=1NqsYNJs1-cS1B-nLMgPbU06wJ8WSEHY1!!
+!!/img/van5.png!!
 
 Our *WeaponBehaviour* base:
 
 This class could use the DefaultToInstanced specifier. But since this system is heavily influenced by Unreal Engine's own InputActions and triggers, I decided to keep it similar.
 
-!!http://drive.google.com/uc?export=view&id=1bSfnZ-U_Hw2LkwJVQ-xh-FaZKZV4pLhm!!
+!!/img/van6.png!!
 
 The *AimModifier* class (Constraints and BulletModifiers look very similar to this):
 
-!!http://drive.google.com/uc?export=view&id=1KBQAtsr3ieW-UVv3arcbWVHvXcVAYTZv!!
+!!/img/van7.png!!
 
 `,
     link: "https://github.com/LostmyCigar/Vanagandar",
@@ -92,7 +92,7 @@ The *AimModifier* class (Constraints and BulletModifiers look very similar to th
     description: `Having betrayed its allies, a wraith now seeks to escape the tomb with its newfound immortality.
     Tomb of Alar is a twin stick shooter worked on full time over the course of 4 weeks. The team goal was to deliver a polished game in a short timeframe.    
     `,
-    image: `1S8hD6ltgHiwBnPqFEZGyZqS9bleXjxrl`,
+    image: `ToAMain.gif`,
     isDesign: false,
     isProgram: true,
     programText: `*Note:* I will not be writing detailed information code implementation here. This will be more about the code structure and how we worked as a team.
@@ -110,17 +110,17 @@ The *AimModifier* class (Constraints and BulletModifiers look very similar to th
     *This needs to be flexible, fast!*
     Creating the shooting for a twinstick shooter is quite hard designwise. Being the absolute core-mechanic of the game, it completely dictates whether the end product feels good to play or not. Because of this we wanted designers to be able to try out and iterate over multiple different designs for the shooting. This becomes a challenge of *teamwork* and *effective communication*. Designers were working with the tool as soon as it became possible and new features had to be created on demand. We needed clear communication on what features needed prioritization over others as well as me giving instruction on how to use everything.
     
-    !!http://drive.google.com/uc?export=view&id=14nfFnndUkCoRxNELavFBCFWkaRlj1oLK!!
+    !!/img/tomb1.png!!
     This is where the designers would change bullet behavior
 
     *The Good,* 
 Data assets for everything. Well, two things. Weapon behavior and Projectile behavior. This creates *a lot of flexibility*, the biggest being the possibility to easily swap data assets on demand, completely changing the behavior of projectiles during their lifetime. This built the possibility of creating very complex weapons since we can link projectile behaviors together by having the keep track of the next behavior and so on. Together with bullets themselves being able to create new bullets after a certain time or on destruction we can create almost any type of projectile imaginable (assuming we also have the movement required for it).
-!!http://drive.google.com/uc?export=view&id=1DbeNVa0rvHpNL4YH4Gtij3vzc86-xFgV!! 
-!!http://drive.google.com/uc?export=view&id=1C72f2Lnfzonby2VPCdk4UKwxUmK4coel!! 
+!!/img/tomb2.png!! 
+!!/img/tomb3.png!! 
 
 *The Bad*
 As someone who very much enjoys clean and maintainable code, this project pained me a bit. If I had to place it somewhere in my favorite triangle it had to be around here:
-!!http://drive.google.com/uc?export=view&id=1Kwn7OLofP-HvTE19_25T4CCgr4as7yVH!!
+!!/img/tomb5.png!!
 
 A big chunk of the code is in the same few files and it would be hard for someone who hasn't worked in them to just jump in and take over.
 
@@ -139,7 +139,7 @@ In my previous projects I’ve always tried to do a more component-based structu
 *Working with Designers*
 As soon as designers could start working with shooting I created a *small guide* on how it all worked and how to create new “weapons” in blueprints. This was so that designers could have something to follow while working and did not require me to repeat explanations multiple times. After a while this guide became outdated, but at that point everyone working with weapons had a grasp on how they worked so that it was no longer needed.
 
-!!http://drive.google.com/uc?export=view&id=1wkpedene4TCMaciUXcFTwKFWZyDqLdA2!!
+!!/img/tomb6.png!!
 (Made in miro)
     `,
     link: "https://github.com/LostmyCigar/TombOfAlar",
@@ -148,7 +148,7 @@ As soon as designers could start working with shooting I created a *small guide*
     title: `Methusela`,
     content: `Design, Combat, Team, Unity, TopDown`,
     description: `Methuselah is a topdown roguelike where the player fights as the force of the forest against the machines that want to tear it down.`,
-    image: `1JpdAmKyaP-6qSRZ2PTm_9V_DTqQqplB_`,
+    image: `MethuselahSlam.gif`,
     isDesign: true,
     isProgram: false,
     designText: `Methuselah is a 10-week project I worked on together with other students from different disciplines. I worked as Lead Designer and was responsible for the overall design of the game. Spending most of my time getting the combat and feel of the game to be the best it could with the tools available. Although it has many flaws (to be expected from a game made in 10 weeks) I am still happy with what we achieved.
@@ -165,7 +165,7 @@ As soon as designers could start working with shooting I created a *small guide*
     title: `Zhi`,
     content: `Programming, Design, Gameplay, Team, Unity, Co-Op, Puzzle`,
     description: `Follow a girl and her dog as they explore an old apartment and learn of its past by solving puzzles.`,
-    image: `1dpFGfVLrgH24yRtknFfHTUcD4e-aGbqX`,
+    image: `Zhi_main2.gif`,
     isDesign: false,
     isProgram: true,
     programText: `I can't cover everything in this tiny space. Here is some of the stuff I did that I won't be covering on this page, but would love to go over in person:
@@ -188,15 +188,15 @@ As soon as designers could start working with shooting I created a *small guide*
     Then we have the pivot point. The pivot point is a child of the base transform and moved a distance from it (to the place we want our camera to be).
     
     When input is received we rotated the base, unity does its matrix transformations and voilà, the camera goes where the player wants it to.
-    !!http://drive.google.com/uc?export=view&id=1NORx9e6OLbhD-aMDWBGD2TwLwywFhdga!!
-    !!http://drive.google.com/uc?export=view&id=1xns3M-4FBQQIFDtCG5T3qVXDEpxQ-XfX!!
+    !!/img/zhi1.png!!
+    !!/img/zhi2.png!!
     Camera Handling is of course run in LateUpdate()
 
     ##*Cutting Corners (Literally)*##
     Zhi plays out in a cramped apartment. What this means for the camera is that, when rotating, we will hit *a lot of corners*. Corners are BAD. Corners makes for a jagged camera and a bad player experience. My way of solving this was to use a SphereCast, more expensive than I'd like but still affordable. This way we never hit the inner part of the corner, instead we land somewhere next to it. Mixing this together with an illegal lerp makes the camera go smoothly between positions.
     
     Here are some other notes about the code that can be seen:    
-    !!http://drive.google.com/uc?export=view&id=1_rtks6Gu2eqyWqKShvTg-gyj68GnTtQU!!
+    !!/img/zhi3.png!!
 	
 The hit objects normal is included when setting the target position
 This is to offset the camera slightly and avoid clipping.
@@ -210,14 +210,14 @@ The T value should be multiplied by deltatime. Yes, I could have hidden this by 
 Distance should not be recalculated every frame
 The distance to the pivot point won't change so it should just be cached at start.
 
-!!http://drive.google.com/uc?export=view&id=1w_FhMTONlC7eYH-6gHVK-7PMx28hQXn_!!
+!!/img/zhi4.gif!!
 The result of two functions
 
 Another Lerp use case found in the code is when we transition between camera states (done with a quickly made, switch case bloated statemachine).
-!!http://drive.google.com/uc?export=view&id=1uahU1yzSLBJkvAQRD75l6kqpRF3wjuRx!!
+!!/img/zhi5.png!!
 
 This time we are not lerping without a license and the result looks like this:
-!!http://drive.google.com/uc?export=view&id=1Zbv4cO70tBcLEMZxA4Lo2N8PSSJEFhcs!!
+!!/img/zhi6.gif!!
 `,
     link: "https://github.com/LostmyCigar/Zhi",
   },
@@ -228,7 +228,7 @@ This time we are not lerping without a license and the result looks like this:
     2 players control 3 robots, each with a different ability, clean up the city before the timer runs out!
     `,
 
-    image: `1GqQ_-6TSdNQXa2Tnm_9PgVauPpEloSss`,
+    image: `ProjectPlutonium_main.gif`,
     isDesign: false,
     isProgram: true,
     programText: `This project was made over a total of 5 work days in 2022 and contains some propper abominations (including but not limited to: 5 badly made singletons). 
@@ -250,16 +250,16 @@ This time we are not lerping without a license and the result looks like this:
     
     After some tinkering with the movement a bit I started trying out more car-like movement and the result was an improvement. Now, top down car games exist but truthfully, I haven't played them. The cars in games I know can turn left and right, and how fast they turn is based on how fast they are moving. This all makes sense for cars, but not really for our characters. So I kept tinkering until I landed on movement that feels like a proper blend, fit for top down gameplay.
     
-    !!http://drive.google.com/uc?export=view&id=1DpKSFfahQ06E_EG98r9ZzD3bTtb0pBwo!!
+    !!/img/pluto1.gif!!
 
     What I ended up with was having the characters move only forward, they have fast acceleration and a turn based on the camera direction. This means that if the player presses “S” or the down key, the character will turn south.
 
     Here are some examples of other mechanics I made:
 
-    !!http://drive.google.com/uc?export=view&id=1mOTY4vbUedc0U8KFkugosvGdDzC9BwS7!!
+    !!/img/pluto2.gif!!
     Adaptive camera
 
-    !!http://drive.google.com/uc?export=view&id=1nNxSkcnXtgq1IcohmrUbw64CT7Gru60X!!
+    !!/img/pluto3.gif!!
     Robot swapping
     `,
     link: "https://github.com/LostmyCigar/ProjectPlutonium",
@@ -277,7 +277,7 @@ This time we are not lerping without a license and the result looks like this:
     title: `Aastra`,
     content: `Solo, Small project, Gamemaker, Platformer`,
     description: `A platformer filled with tricky jumps. The very first game I made.`,
-    image: `1tV1FofE_wLxIuSPqYcaol6zRz1ZvaItl`,
+    image: `astra.gif`,
     isDesign: true,
     isProgram: false,
     designText:
@@ -291,7 +291,7 @@ This time we are not lerping without a license and the result looks like this:
     content: `Solo, Small project, Gamemaker, Platformer`,
     description: `A unique game where you control a bouncing ball and platforms as you navigate through 6 very different levels.`,
 
-    image: `1TcxxFg_hPrJemkzDMOx8au20TR1pclrC`,
+    image: `bouncingball.gif`,
     isDesign: true,
     isProgram: false,
     designText: `A challenging game where the player tries to maneuver both moving platforms and a bouncing ball at the same time. Using these simple mechanics I tried creating challenges based on different elements; timing, precision and a puzzle. It’s a short and simple game that could, with a few adjustments, work well on mobile.`,
@@ -304,14 +304,14 @@ This time we are not lerping without a license and the result looks like this:
     content: `Solo, Small project, Unity, Card battler`,
     description: `An attempt at bringing over a board game (created by myself) to the digital world in order to create and explore more transformative mechanics.`,
 
-    image: `1nZvwU0EfLlZ4w8j3l1tRK_aUHzB1lr1w`,
+    image: `BehemothBattle.png`,
     isDesign: true,
     isProgram: false,
     designText: `An attempt at turning a board game I designed into a computer game. A result of me wanting to explore some key mechanical differences in online and offline card games and a project I’m still working on from time to time. It is still at the stage where I am mostly translating the board game over to Unity, it is playable with the core mechanics implemented. Since it is made mainly for testing out mechanics, the balance is currently a bit off and it is lacking the visual clarity that the board game has. I am hoping to start testing with more transformative mechanics soon, such as cards being able to attack their own teammates for benefits and buffs.
     
     The goal is to make a game filled with synergies. Making a game where most of the mechanics are multiplicative and work well with each other. I decided to use a board game that I had already made so I could fully focus on the cards and their mechanics and enhance the gameplay through them. While it is a work in progress the balance is still way off. Behemoth Battles is a translation of a board game where the numbers and mechanics are a lot more grounded. To be able to bring in a lot of multiplicative mechanics I started with doubling the Hp of every monster card, hoping to avoid game states where one player snowballs too fast, making the outcome decided and predictable for too long. Unfortunately this has made the games start way too slow instead. The issue is that the core mechanics doesn’t support a game that wants to build up and evolve during a single session, they are more fitting of a game that stays similar the way throughout, the way the board game does. That being said, I don't think that I’ll change or even tune the core gameplay to align with the goal. This game is more of an experiment to see how I can create mechanics that lets players be creative, it doesn’t need to be good in any other area.
     
-    !!http://drive.google.com/uc?export=view&id=1OPYq5SDtsPnzJ-f_ehCRJVwMuyb9s44W!!
+    !!/img/BehemothBattle.png!!
     
     ##*Behemoth Battles: Board Game Rules*##
     Recruit, mutate and then attack with your behemoths.
@@ -323,14 +323,14 @@ This time we are not lerping without a license and the result looks like this:
 
     ##*Setting up*##
     Start with setting up the table the following way:
-    !!http://drive.google.com/uc?export=view&id=12cYK4uIHCf4a5OrvvykoaeaCFuRKLjBf!!
+    !!/img/setup.png!!
 
     Choose the player starting.
     The player going second then starts with choosing which one of the three face-up behemoths they want to start with.
     The starting player then chooses one of the remaining two.
     Turn another behemoth card up so that there are two upwards facing cards.
     The starting player may then begin their first turn.
-    !!http://drive.google.com/uc?export=view&id=1SR3eNo21ZAkfNJ96PloivU_ZS9Gp9Iff!!
+    !!/img/setup2.png!!
 
     ##*Turn overview*##
     Choose the player starting.
@@ -354,17 +354,17 @@ This time we are not lerping without a license and the result looks like this:
     Power tokens decide how powerful each of the actions are. Any time an action is chosen the players must remove all Power tokens from that action and place 1 Power token on the actions not chosen during that turn.
 
     Example:
-    !!http://drive.google.com/uc?export=view&id=10zuHv_wMz_pNpbd44dCC-NU6uAxh92_g!!
+    !!/img/turn.png!!
     
     There are 2 Power tokens on Attack, 1 on Mutation points and 0 on
     Recruitment points.
 
     Player 1 selects Attack.
-    !!http://drive.google.com/uc?export=view&id=1DP-lLQlv7q72MbcrlszcO_OjH8p2lu2-!!
+    !!/img/turn2.png!!
 
     Now that it is Player 2s turn, all the Power tokens are removed from Attack while 1 Power token has been added to both Recruitment points and Mutation points.
     Player 2 selects Recruitment points
-    !!http://drive.google.com/uc?export=view&id=1pULQ51VYFd5jFHkm5PwMDayAYy8A_YXp!!
+    !!/img/turn3.png!!
 
     Recruitment points therefore have 0 Power tokens during Player 1s turn. Attack and Mutations points have gained +1 Power token.
 
@@ -382,12 +382,12 @@ This time we are not lerping without a license and the result looks like this:
     When attacking, the defender does not deal damage back to the attacker unless it specified that it can.
 
     ##*Mutation Cards and Card slots*##
-    !!http://drive.google.com/uc?export=view&id=1-LIXFlJdA8P9cm8-ssyDqS8pHuyJd2kA!!
+    !!/img/card.png!!
 
     Mutation cards are bought using Mutation points. The cost is seen in the top-right corner. When a card has been bought, a new one takes its place in the shop from the deck. There should always be 3 Mutation cards available for players to purchase.
     
     A player can buy Mutation cards during any time as long as it is still their turn. When a mutation card is bought it is placed on an empty card slot. If the player has no card slot available they do not have the ability to buy Mutation Cards. Card slots can be found at the bottom of Behemoth cards
-    !!http://drive.google.com/uc?export=view&id=1zn0Y2puc5AAhtVx7dArxsF7Yh-G4Aumj!!
+    !!/img/cardex.png!!
     This behemoth has 1 available card slot.
 
     ##*Behemoths, recruitment and Weapons*##
@@ -408,7 +408,7 @@ This time we are not lerping without a license and the result looks like this:
     content: `Solo, Small project, Unity, Mobile`,
     description: `A mobile game created to explore the effect that synergies can have on player experience and overall enjoyment.`,
 
-    image: `1eGTQRZgdQG_rfeFuqgaGI6GjwqPC6AyG`,
+    image: `synergyshooter.jpg`,
     isDesign: true,
     isProgram: false,
     designText: `Mobile game created to explore the effect that synergies can have on player experience and overall enjoyment.
@@ -423,7 +423,7 @@ This time we are not lerping without a license and the result looks like this:
     content: `Design, Team, Game-jam, Unity`,
     description: `A game-jam game about a dude slicing things. When your only tool is a hammer, every problem becomes a nail. Well, when your arms are swords, every problem becomes slice-able.`,
 
-    image: `1YEr5ve4C6G0ba99PEzxKcLZ9Wgctn89y`,
+    image: `SliceDude.gif`,
     isDesign: true,
     isProgram: false,
     designText: `A game-jam game about a dude slicing things. When your only tool is a hammer, every problem becomes a nail. Well, when your arms are swords, every problem becomes slice-able.

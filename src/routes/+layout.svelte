@@ -128,9 +128,8 @@
 		color: #ECE8E1;
 	}
 	:global(body){
-		background-color: #121824;
 		color: #ECE8E1;
-        background: url('http://drive.google.com/uc?export=view&id=1pvlflhccoI5NXL85RlmMbfru9K6u3Oqf') no-repeat;
+        background: url('/img/background.jpg') no-repeat;
         background-size: cover;
         background-attachment: fixed;
 	}

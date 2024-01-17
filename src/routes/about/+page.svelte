@@ -5,7 +5,7 @@ import { about } from '../../lib/data/projects';
 <div>
     <h2>{about.title}</h2>
     <p>{about.content}</p>
-    <img src={`http://drive.google.com/uc?export=view&id=${about.image}`} alt="Profile">
+    <img src={`/img/${about.image}`} alt="Profile">
 </div>
 
 <style>

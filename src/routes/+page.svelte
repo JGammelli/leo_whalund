@@ -8,7 +8,7 @@ import { projects } from '../lib/data/projects';
             <div class="projectContainer">
 				<div class="project">
 					
-					<div class="img" style= {`background: url('http://drive.google.com/uc?export=view&id=${project.image}') no-repeat; background-size: cover;`}>
+					<div class="img" style= {`background: url('/img/${project.image}') no-repeat; background-size: cover;`}>
 						<div class="svg">				
 							<div class="textContainer">
 								<div class="text">
